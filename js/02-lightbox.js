@@ -19,13 +19,7 @@ const makeGalleryImage = galleryItems.map(makeImage).join('');
 
 galleryRef.insertAdjacentHTML('afterbegin', makeGalleryImage);
 
-galleryRef.addEventListener('click', onImageClick);
-
-function onImageClick(e) {
-  e.preventDefault();
-}
-
-const galleryLightbox = new SimpleLightbox('.gallery__link', {
+new SimpleLightbox('.gallery__link', {
   captionsData: 'alt',
   captionPosition: 'botton',
   captionDelay: 250,
